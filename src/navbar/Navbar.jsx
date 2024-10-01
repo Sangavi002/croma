@@ -1,12 +1,16 @@
 import { Box, Img, Input, Button, useBreakpointValue } from "@chakra-ui/react";
 import { HamburgerMenu } from "./hamburgerMenu";
+import { Login } from "./login"; 
+import { useDisclosure } from "@chakra-ui/react"; 
 
 export const Navbar = () => {
     const logoWidth = useBreakpointValue({ base: "70%",sm:"100%", md: "100%" });
     const buttonSize = useBreakpointValue({ base: "20px",sm:"22px", md: "40px",lg:"30px" });
     const flexDirection = useBreakpointValue({ base: "row",sm: "row-reverse" , md:"row-reverse"});
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
+        <>
         <Box 
             bg="black" 
             h={{base:"60px",sm:"80px",md:"80px"}}
@@ -41,7 +45,7 @@ export const Navbar = () => {
                         w={buttonSize}
                     />
                 </Button>
-                <Button border="none" bg="none" p={{base:"0",md:"0 16px"}} _hover={{ bg: 'transparent', color: 'white' }} >
+                <Button border="none" bg="none" p={{base:"0",md:"0 16px"}} _hover={{ bg: 'transparent', color: 'white' }} onClick={onOpen}>
                     <Img 
                         src="https://github.com/Sangavi002/croma_img/blob/main/login.png?raw=true"  
                         alt="login" 
@@ -57,5 +61,7 @@ export const Navbar = () => {
                 </Button>
             </Box>     
         </Box>
+        <Login isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+        </>
     );
 };
