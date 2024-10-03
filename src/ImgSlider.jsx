@@ -20,7 +20,7 @@ const offer = [
 export const ImgSlider = () => {
   return (
     <>
-    <Box p="20px 60px" bg="#191919" display="grid" gridTemplateColumns="repeat(8,12%)">
+    <Box p={{base:"10px",md:"20px",lg:"20px 60px"}} bg="#191919" display="grid" gridTemplateColumns={{base:"repeat(4,25%)",md:"repeat(8,12%)",lg:"repeat(8,12%)"}}>
         {product.map((item, index) => (
           <Box key={index} w="100%"  p="10px">
             <Link key={index} to={`/${item.alt}`} style={{textDecoration: "none"}}>
@@ -29,16 +29,16 @@ export const ImgSlider = () => {
           </Box>
         ))}
     </Box>
-    <Box display="flex" p="20px 60px" bg="#191919" gap="20px" >
+    <Box display="flex" flexDirection={{base:"column",md:"row",lg:"row"}} p={{base:"10px",md:"20px 60px",lg:"20px 60px"}} bg="#191919" gap="20px" >
         {offer.map((item,index) => (
             <Box key={index}>
                 <Image src={item.img} alt={`product-${index}`} w="100%" borderRadius="10px"/>
             </Box>
         ))}
     </Box>
-    <Box p="30px 60px" bg="#191919" >
+    <Box p={{base:"10px",md:"20px 60px",lg:"20px 60px"}} bg="#191919" >
         <Heading size="lg" color="white" mb="20px">Exciting Bank Offers For You</Heading>
-        <Image src="https://github.com/Sangavi002/croma_img/raw/refs/heads/main/icici.webp" alt="offer" w="100%" borderRadius="10px"/>
+        <Image src="https://github.com/Sangavi002/croma_img/raw/refs/heads/main/icici.webp" alt="offer" w="100%" borderRadius="10px" h={{base:"50px"}}/>
     </Box>
 
     </>
