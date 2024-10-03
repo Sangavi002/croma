@@ -6,6 +6,7 @@ import { Navbar } from "./navbar/Navbar"
 import {Routes,Route} from "react-router-dom";
 import "./App.css"
 import { Cart } from "./cart/cart";
+import { Footer } from "./Footer";
 
 export const App = () => {
   return(
@@ -18,6 +19,7 @@ export const App = () => {
       <Route path="/mobile/:id" element={<ProductDetail />} />
       <Route path="/cart" element={<Cart />} />
     </Routes>
+    <Footer />
     </>
   )
 }

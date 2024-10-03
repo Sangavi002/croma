@@ -50,7 +50,7 @@ export const ProductDetail = () => {
     return (
         <>
         <Box display="flex" flexDirection={{base:"column",md:"row",lg:"row"}} bg="#191919" p="40px 60px"> 
-            <Box w="50%">
+            <Box w={{base:"100%",md:"50%",lg:"50%"}}>
                 {loading ? (
                     <Text>Loading product details...</Text>
                 ) : error ? (

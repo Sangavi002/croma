@@ -37,7 +37,7 @@ export const Navbar = () => {
                 />
             </Box>
 
-            <Box w="20%" ml={{ base: "100px",sm:"60px", md: "40px" }} display="flex" justifyContent="space-between" >
+            <Box w={{base:"20%",md:"20%",lg:"20%"}} ml={{ base: "100px",sm:"60px", md: "40px" }} display="flex" justifyContent="space-between" >
                 <Button border="none" bg="none" display={{base:"none",sm:"block", md:"block"}} p={{base:"0",md:"0 16px"}} _hover={{ bg: 'transparent', color: 'white' }} >
                     <Img 
                         src="https://github.com/Sangavi002/croma_img/blob/main/location.png?raw=true"  
