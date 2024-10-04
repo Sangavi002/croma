@@ -1,6 +1,6 @@
 import { Home } from "./Home";
-import { Mobile } from "./mobile/mobile";
-import { ProductDetail } from "./mobile/productDetail";
+import { Product } from "./product/product";
+import { ProductDetail } from "./product/productDetail";
 import { Login } from "./navbar/login";
 import { Navbar } from "./navbar/Navbar"
 import {Routes,Route} from "react-router-dom";
@@ -19,8 +19,8 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/mobile" element={<Mobile />} />
-      <Route path="/mobile/:id" element={<ProductDetail />} />
+      <Route path="/:item" element={<Product />} />
+      <Route path="/:item/:id" element={<ProductDetail />} />
       <Route path="/cart" element={<Cart onOpen={onOpen}/>} />
       <Route path="/checkout" element={<PrivateRoute><CheckOut /></PrivateRoute>} />
     </Routes>

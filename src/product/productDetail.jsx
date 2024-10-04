@@ -6,11 +6,11 @@ import { useDisclosure } from "@chakra-ui/react";
 import { CartAlert } from "../cart/cartAlert";
 
 export const ProductDetail = () => {  
-    const { id } = useParams();
+    const {item,id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    let url = `https://croma-b97df-default-rtdb.asia-southeast1.firebasedatabase.app/mobile/${id}.json`;
+    let url = `https://croma-b97df-default-rtdb.asia-southeast1.firebasedatabase.app/Product/${item}/${id}.json`;
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     useEffect(() => {
