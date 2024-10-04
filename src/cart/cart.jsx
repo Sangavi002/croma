@@ -1,11 +1,13 @@
 import { Box, Heading, Img, Button, Text } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export const Cart = () => {
+export const Cart = ({ onOpen }) => {  // Accept onOpen as a prop
     const url = "https://croma-b97df-default-rtdb.asia-southeast1.firebasedatabase.app/cart.json"; 
     const [product, setProduct] = useState({});
     const [totalPrice, setTotalPrice] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(url)
@@ -23,7 +25,6 @@ export const Cart = () => {
         setTotalPrice(total);
     };
 
-   
     const removeProduct = (id) => {
         const updatedCart = { ...product };
         delete updatedCart[id];
@@ -35,6 +36,15 @@ export const Cart = () => {
                 calculateTotal(updatedCart);
             })
             .catch((err) => console.error("Error removing product:", err));
+    };
+
+    const handleCheckout = () => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            navigate("/checkout"); // Navigate to checkout if authenticated
+        } else {
+            onOpen(); // Open the login modal if not authenticated
+        }
     };
 
     return (
@@ -74,8 +84,8 @@ export const Cart = () => {
                         <Text>Total</Text>
                         <Text>₹{totalPrice}</Text>
                     </Box>
-                    <Button bg="#12dda6" mr={3}  w="100%" m="20px 0px">
-                            Checkout
+                    <Button bg="#12dda6" mr={3} w="100%" m="20px 0px" onClick={handleCheckout}>
+                        Checkout
                     </Button>
                 </Box>
             </Box>

@@ -2,12 +2,14 @@ import { Box, Img, Input, Button, useBreakpointValue } from "@chakra-ui/react";
 import { HamburgerMenu } from "./hamburgerMenu";
 import { Login } from "./login"; 
 import { useDisclosure } from "@chakra-ui/react"; 
+import { useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
     const logoWidth = useBreakpointValue({ base: "70%",sm:"100%", md: "100%" });
     const buttonSize = useBreakpointValue({ base: "20px",sm:"22px", md: "40px",lg:"30px" });
     const flexDirection = useBreakpointValue({ base: "row",sm: "row-reverse" , md:"row-reverse"});
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const navigate = useNavigate()
 
     return (
         <>
@@ -57,6 +59,7 @@ export const Navbar = () => {
                         src="https://github.com/Sangavi002/croma_img/blob/main/cart.png?raw=true"  
                         alt="cart" 
                         w={buttonSize} 
+                        onClick={() => navigate("/cart")}
                     />
                 </Button>
             </Box>     

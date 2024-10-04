@@ -7,8 +7,12 @@ import {Routes,Route} from "react-router-dom";
 import "./App.css"
 import { Cart } from "./cart/cart";
 import { Footer } from "./Footer";
+import { CheckOut } from "./CheckOut";
+import {PrivateRoute} from "./PrivateRoute"
+import { useDisclosure } from "@chakra-ui/react";
 
 export const App = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return(
     <>
     <Navbar/>
@@ -17,9 +21,11 @@ export const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/mobile" element={<Mobile />} />
       <Route path="/mobile/:id" element={<ProductDetail />} />
-      <Route path="/cart" element={<Cart />} />
+      <Route path="/cart" element={<Cart onOpen={onOpen}/>} />
+      <Route path="/checkout" element={<PrivateRoute><CheckOut /></PrivateRoute>} />
     </Routes>
     <Footer />
+    <Login isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
     </>
   )
 }
