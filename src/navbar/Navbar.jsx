@@ -21,6 +21,8 @@ export const Navbar = () => {
             p={{ base: "10px 10px", sm: "20px 40px", md: "20px 80px" }} 
             display="flex" 
             alignItems="center"
+            position="fixed"
+            w="100%"
         >
             <Box display="flex" alignItems="center" flexDirection={flexDirection} w={{ base: "40%", md: "20%" }} ml={{ sm: "-40px" }}>
                 <HamburgerMenu />

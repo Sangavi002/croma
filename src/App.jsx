@@ -10,11 +10,14 @@ import { Footer } from "./Footer";
 import { CheckOut } from "./CheckOut";
 import {PrivateRoute} from "./PrivateRoute"
 import { useDisclosure } from "@chakra-ui/react";
+import { SearchProvider } from "./Search/SearchContext";
 
 export const App = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const item = "some_item";
+
   return(
-    <>
+    <SearchProvider item={item}>
     <Navbar/>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -26,6 +29,6 @@ export const App = () => {
     </Routes>
     <Footer />
     <Login isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
-    </>
+    </ SearchProvider>
   )
 }

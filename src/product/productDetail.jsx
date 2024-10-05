@@ -49,7 +49,7 @@ export const ProductDetail = () => {
 
     return (
         <>
-        <Box display="flex" flexDirection={{base:"column",md:"row",lg:"row"}} bg="#191919" p="40px 60px"> 
+        <Box display="flex" flexDirection={{base:"column",md:"row",lg:"row"}} bg="#191919" p={{ base: "80px 30px", sm: "20px 60px", md: "100px 40px", lg: "140px 60px" }} > 
             <Box w={{base:"100%",md:"50%",lg:"50%"}}>
                 {loading ? (
                     <Text>Loading product details...</Text>
@@ -57,8 +57,8 @@ export const ProductDetail = () => {
                     <Text>Error: {error}</Text>
                 ) : product ? (
                     <>
-                        <Box w={{base:"100%",md:"50%",lg:"50%"}} h="350" ml="auto" mr="auto">
-                            <Img src={product.image} alt={product.title} width="100%" mb="10px" h="350px"/>
+                        <Box w={{base:"100%",md:"40%",lg:"50%"}} h={{base:"350",md:"250",lg:"350"}} ml="auto" mr="auto">
+                            <Img src={product.image} alt={product.title} width="100%" mb="10px" h={{base:"350",md:"250",lg:"350"}}/>
                         </Box>
                     </>
                 ) : (

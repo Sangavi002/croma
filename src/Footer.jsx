@@ -2,7 +2,7 @@ import { Box,Text,Input,Img, Heading, } from "@chakra-ui/react"
 
 export const Footer = () => {
     return(
-        <Box display={{base:"block",md:"Flex",lg:"Flex"}} bg="#1d1d1d" p={{md:"20px",lg:"40px"}}>
+        <Box display={{base:"block",md:"Flex",lg:"Flex"}} bg="#1d1d1d" p={{md:"20px",lg:"40px"}} mt="-81px">
             <Box borderRight="1px solid" color="white" w={{base:"100%",md:"33%",lg:"33%"}} p={{base:"30px",md:"0px",lg:"0px 30px"}}>
                 <Heading size="md">Connect with us</Heading>
                 <Input placeholder="Enter Email Id" w="60%"/>

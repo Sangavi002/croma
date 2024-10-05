@@ -5,11 +5,11 @@ const product = [
   { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/mobile.webp", alt: "Mobile Phones" },
   { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/wm.webp", alt: "Washing Machines" },
   { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/tv.webp", alt: "Televisions" },
-  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/laptop.webp", alt: "Laptop" },
-  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/ac.webp", alt: "AC" },
-  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/kitchen.webp", alt: "Kitchen" },
-  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/fridge.webp", alt: "Fridge" },
-  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/headphone.webp", alt: "Headphone" },
+  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/laptop.webp", alt: "Laptops" },
+  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/ac.webp", alt: "Air Conditioners" },
+  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/kitchen.webp", alt: "Kitchen Appliances" },
+  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/fridge.webp", alt: "Refrigerators" },
+  { image: "https://raw.githubusercontent.com/Sangavi002/croma_img/refs/heads/main/headphone.webp", alt: "Headphones & Earphones" },
 ];
 
 const offer = [
