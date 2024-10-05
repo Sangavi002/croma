@@ -45,17 +45,17 @@ export const Product = () => {
         {sortedData.length > 0 ? (
           sortedData.map(([id, value]) => (
             <Link key={id} to={`/${item}/${id}`} style={{ textDecoration: "none" }}>
-              <Box color="white" borderBottom="1px solid grey" display={{ base: "flex", sm: "block", md: "block" }}>
+              <Box color="white" borderBottom="1px solid grey" display={{ base: "flex", sm: "block", md: "block" }} w={{base:"100%"}}>
                 <Box h={{ base: "170px", sm: "250px", md: "180px", lg: "280px" }} w={{ base: "85%", sm: "100%", md: "100%", lg: "100%" }} bg="#393939" borderRadius="20px" p={{ base: "10px 0px", sm: "20px" }}>
                   <center>
                     <Img src={value.image} alt={value.title} w={{ base: "100%", sm: "80%", md: "80%", lg: "80%" }} h={{ base: "150px", sm: "80%" }} />
                   </center>
                 </Box>
-                <Box p={{ base: "10px" }}>
+                <Box p={{ base: "10px 20px" }}>
                   <Heading mt="20px" size="sm">{value.title}</Heading>
                   <Box mt="20px" display="flex">
                     <Text color="#12dda6">{value.rating}</Text>
-                    <Img src="https://github.com/Sangavi002/croma_img/blob/main/star.png?raw=true" alt="star" w="4%" h="15px" m="5px 3px" />
+                    <Img src="https://github.com/Sangavi002/croma_img/blob/main/star.png?raw=true" alt="star" w={{base:"6%",md:"4%",lg:"4%"}} h="15px" m="5px 3px" />
                   </Box>
                   <Heading mt="20px" mb="20px" size="sm">₹{value.price}</Heading>
                 </Box>

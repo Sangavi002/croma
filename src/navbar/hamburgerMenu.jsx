@@ -12,10 +12,12 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import { useNavigate,Link } from "react-router-dom";
 
 export const HamburgerMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const buttonText = useBreakpointValue({ base: '',sm:"Menu", md: 'Menu' }); 
+  const navigate = useNavigate();
 
   return (
     <>
@@ -39,22 +41,34 @@ export const HamburgerMenu = () => {
           <DrawerBody>
             <Box>
               <Text onClick={onClose} color="white" pr="100px" cursor="pointer" mb="10px">
+                <Link to="/Televisions">
                 Television & Accessories
+                </Link>
               </Text>
               <Text onClick={onClose} color="white" pr="100px" cursor="pointer" mb="10px">
-                Home Appliances
+               <Link to="/Washing Machines">
+                Washing Machines
+                </Link>
               </Text>
               <Text onClick={onClose} color="white" pr="100px" cursor="pointer" mb="10px">
+                <Link to="/Mobile">
                 Phone & Wearables
+                </Link>
               </Text>
               <Text onClick={onClose} color="white" pr="100px" cursor="pointer" mb="10px">
-                Computers & Tablets
+                <Link to="/Laptop">
+                Laptop
+                </Link>
               </Text>
               <Text onClick={onClose} color="white" pr="100px" cursor="pointer" mb="10px">
+                <Link to="/Kitchen Appliances">
                 Kitchen Appliances
+                </Link>
               </Text>
               <Text onClick={onClose} color="white" pr="100px" cursor="pointer" mb="10px">
-                Audio & Video
+                <Link to="/Air Conditioners">
+                Air Conditioners
+                </Link>
               </Text>
               <Text onClick={onClose} color="white" pr="100px" cursor="pointer" mb="10px">
                 Health & Fitness
