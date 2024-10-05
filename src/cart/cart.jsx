@@ -56,8 +56,8 @@ export const Cart = ({ onOpen }) => {
     };
 
     return (
-        <Box p={{ base: "10px", sm: "30px", md: "40px", lg: "40px 60px" }} bg="#f9f9f9">
-            <Heading>Your Cart</Heading>
+        <Box p={{ base: "65px 0px", sm: "70px 0px", md: "80px 40px", lg: "90px 60px" }} bg="#f9f9f9">
+            <Heading p={{base:"10px"}}>Your Cart</Heading>
             {Object.keys(product).length === 0 ? ( 
                 <Box display="flex" flexDirection="column" alignItems="center" h="500px" pt="100px">
                     <Img src="https://github.com/Sangavi002/croma_img/blob/main/emptycart.png?raw=true" alt="emptyCart" w="20%"/>

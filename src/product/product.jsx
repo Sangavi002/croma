@@ -46,7 +46,7 @@ export const Product = () => {
           sortedData.map(([id, value]) => (
             <Link key={id} to={`/${item}/${id}`} style={{ textDecoration: "none" }}>
               <Box color="white" borderBottom="1px solid grey" display={{ base: "flex", sm: "block", md: "block" }} w={{base:"100%"}}>
-                <Box h={{ base: "170px", sm: "250px", md: "180px", lg: "280px" }} w={{ base: "85%", sm: "100%", md: "100%", lg: "100%" }} bg="#393939" borderRadius="20px" p={{ base: "10px 0px", sm: "20px" }}>
+                <Box h={{ base: "170px", sm: "250px", md: "180px", lg: "280px" }} w={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }} bg="#393939" borderRadius="20px" p={{ base: "10px 0px", sm: "20px" }}>
                   <center>
                     <Img src={value.image} alt={value.title} w={{ base: "100%", sm: "80%", md: "80%", lg: "80%" }} h={{ base: "150px", sm: "80%" }} />
                   </center>
