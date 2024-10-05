@@ -25,7 +25,7 @@ export const CartAlert = ({ onOpen, isOpen, onClose }) => {
                     onClose(); 
                     navigate("/cart")
                 })
-            na
+            
         }
     };
 
@@ -52,7 +52,7 @@ export const CartAlert = ({ onOpen, isOpen, onClose }) => {
                     </ModalBody>
 
                     <ModalFooter display="flex" justifyContent="center">
-                        <Button bg="#12dda6" mr={3} onClick={handleProceedToCart} w="40%">
+                        <Button bg="#12dda6" mr={3} onClick={handleProceedToCart} w="40%" p={{base:" 0px 70px"}}>
                             Proceed to cart
                         </Button>
                     </ModalFooter>

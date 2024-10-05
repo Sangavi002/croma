@@ -7,6 +7,7 @@ export const Login = ({ onOpen, isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
+    
   });
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
@@ -18,8 +19,8 @@ export const Login = ({ onOpen, isOpen, onClose }) => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.username) newErrors.username = "Invalid username";
-    if (!formData.password) newErrors.password = "Invalid password";
+    if (!formData.username) newErrors.username = "Enter your Email id.";
+    if (!formData.password) newErrors.password = "Invalid password.";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0; 
   };
@@ -36,9 +37,14 @@ export const Login = ({ onOpen, isOpen, onClose }) => {
     .then((response) => {
       localStorage.setItem('token', response.data.token);
       onClose(); 
+      alert("Logged in successfully.")
       setFormData({ username: '', password: '' });
       navigate('/'); 
     })
+    .catch((err) => {
+      alert("Error in Login."); 
+      setErrors({}); 
+    });
   };
 
   return (

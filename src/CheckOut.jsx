@@ -68,19 +68,19 @@ export const CheckOut = () => {
                     return axios.delete(url);
                 })
                 .then(() => {
-                    alert("Order Placed");
+                    alert("Order Placed Successfully !");
                     navigate("/");
                 })
                 .catch(error => {
                     console.error("Error during checkout:", error);
-                    alert("Error in placing the order.");
+                    alert("Error in placing your order.");
                 });
         }
     };
 
     return (
-       <Box p={{base:"10px ",sm:"30px",md:"40px",lg:"40px 60px"}} bg="#f9f9f9">
-            <Heading size={{base:"sm",md:"md",lg:"md"}}>ENTER SHIPPING INFORMATION</Heading>
+       <Box p={{ base: "65px 0px", sm: "70px 0px", md: "160px 40px", lg: "90px 60px" }} bg="#f9f9f9">
+            <Heading size={{base:"sm",md:"md",lg:"md"}} p={{base:"10px"}}>ENTER SHIPPING INFORMATION</Heading>
             <Box display={{base:"block",md:"Flex",lg:"Flex"}} gap={{base:"0px",md:"30px",lg:"30px"}} mt="10px">
                 <Box w={{base:"100%",md:"70%",lg:"70%"}}  >
                     <Box boxShadow="rgba(149, 157, 165, 0.2) 0px 8px 24px"p="20px">
@@ -88,23 +88,23 @@ export const CheckOut = () => {
                         <Box display={{base:"block",md:"Flex",lg:"Flex"}} p="10px 0px" gap="60px">
                             <Box>
                                 <label>Firstname</label>
-                                <Input name="firstName" placeholder="Enter FirstName" m="10px 0px" required value={formData.firstName} onChange={handleChange} /> 
+                                <Input type="text" name="firstName" placeholder="Enter FirstName" m="10px 0px" required value={formData.firstName} onChange={handleChange} /> 
                                 {errors.firstName && <Text color="red" m="-5px 0 10px 0" fontSize="13px">{errors.firstName}</Text>}
                                 <label>Email</label>
-                                <Input name="email" placeholder="Enter your Email id" m="10px 0px" required value={formData.email} onChange={handleChange} /> 
+                                <Input type="email"name="email" placeholder="Enter your Email id" m="10px 0px" required value={formData.email} onChange={handleChange} /> 
                                 {errors.email && <Text color="red" m="-5px 0 10px 0" fontSize="13px">{errors.email}</Text>}  
                             </Box>
                             <Box>
                                 <label>Lastname</label>
-                                <Input name="lastName" placeholder="Enter LastName" m="10px 0px" required value={formData.lastName} onChange={handleChange} /> 
+                                <Input type="text" name="lastName" placeholder="Enter LastName" m="10px 0px" required value={formData.lastName} onChange={handleChange} /> 
                                 {errors.lastName && <Text color="red" m="-5px 0 10px 0" fontSize="13px">{errors.lastName}</Text>}  
                                 <label>Mobile</label>
-                                <Input name="mobile" placeholder="Enter your mobile number" m="10px 0px" required value={formData.mobile} onChange={handleChange} /> 
+                                <Input type="number"name="mobile" placeholder="Enter your mobile number" m="10px 0px" required value={formData.mobile} onChange={handleChange} /> 
                                 {errors.mobile && <Text color="red" m="-5px 0 10px 0" fontSize="13px">{errors.mobile}</Text>}  
                             </Box>
                         </Box>
                         <label>Enter Shipping Address:</label>
-                        <Input name="address" placeholder="Enter your shipping address" m="10px 0px" required value={formData.address} onChange={handleChange} /> 
+                        <Input type="text" name="address" placeholder="Enter your shipping address" m="10px 0px" required value={formData.address} onChange={handleChange} /> 
                         {errors.address && <Text color="red" m="-5px 0 10px 0" fontSize="13px">{errors.address}</Text>}  
                     </Box>
                     <Box m={{base:"10px 0"}} >
@@ -139,7 +139,7 @@ export const CheckOut = () => {
                         <Text>Total</Text>
                         <Text>₹{totalPrice}</Text>
                     </Box>
-                    <Button bg="#12dda6" mr={3} w="100%" m="20px 0px" onClick={handleCheckout} bg="#12dda6">
+                    <Button bg="#12dda6" mr={3} w="100%" m="20px 0px" onClick={handleCheckout} >
                         Place order
                     </Button>
                 </Box>
