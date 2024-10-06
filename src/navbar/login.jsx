@@ -61,7 +61,7 @@ export const Login = ({ onOpen, isOpen, onClose }) => {
               <Text color="white">cityslicka</Text>
             </Box>
           </Box>
-          <Text m="10px 0px">Please enter your Email ID and Password</Text>
+          <Text m="10px 0px">Please enter above Email ID and Password</Text>
           <Input
             placeholder="Enter your EmailID"
             m="10px 0px"
