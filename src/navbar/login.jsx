@@ -63,7 +63,7 @@ export const Login = ({ onOpen, isOpen, onClose }) => {
           </Box>
           <Text m="10px 0px">Please enter above Email ID and Password</Text>
           <Input
-            placeholder="Enter your EmailID"
+            placeholder="Enter above EmailID"
             m="10px 0px"
             color="white"
             name="username"
@@ -72,7 +72,7 @@ export const Login = ({ onOpen, isOpen, onClose }) => {
           />
           {errors.username && <Text color="red" fontSize="14px">{errors.username}</Text>}
           <Input
-            placeholder="Enter your password"
+            placeholder="Enter above password"
             m="10px 0px"
             color="white"
             type="password"
