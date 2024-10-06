@@ -1,8 +1,25 @@
-# React + Vite
+# Croma Clone App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Croma Clone App is an online shopping platform designed to replicate the functionality of Croma. Built using React.js and styled with Chakra UI, this app utilizes Firebase for the backend, ensuring a secure and user-friendly shopping experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication**: Users can log in while checkout; guests can browse products but must log in to make purchases.
+  
+- **Responsive Design**: The app is styled with Chakra UI to provide a consistent experience across various devices.
+
+- **Cart Functionality**: Users can add products to their cart, which is reflected in the cart icon on the navbar.
+
+- **Price Filtering**: Users can filter products by price in ascending or descending order according to their preferences.
+
+- **Alert Messages**: Notifications are provided when users log in and during the checkout process to confirm the purchase order.
+
+## Technologies Used
+
+- **Frontend**: 
+  - React.js
+  - Chakra UI
+
+- **Backend**: 
+  - Firebase
+
